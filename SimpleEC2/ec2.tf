@@ -19,7 +19,7 @@
    },
    "variable":{
       "ami":{
-         "type":"list",
+         "type":"string",
          "description":"the AMI to use",
          "default": "ami-cb9ec1b1"
       }
