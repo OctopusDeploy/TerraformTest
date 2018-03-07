@@ -22,6 +22,10 @@
          "type":"string",
          "description":"the AMI to use",
          "default": "ami-cb9ec1b1"
+      },
+      "filecontents"{
+        "type":"string",
+        "default":"${file("test.txt")}"
       }
    },
    "resource":{
@@ -49,6 +53,9 @@
       },
       "test3":{
          "value":"${map(\"a\", \"hi\")}"
+      },
+      "filecontents" {
+        "value":"${var.filecontents}"
       }
    }
 }
