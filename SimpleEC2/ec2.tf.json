@@ -26,8 +26,8 @@
    },
    "resource":{
       "template_file" : {
-          "test" {
-            "filename" "test.txt"
+          "test": {
+            "filename": "test.txt"
           }
       },
       "aws_instance":{
@@ -55,7 +55,7 @@
       "test3":{
          "value":"${map(\"a\", \"hi\")}"
       },
-      "filecontents" {
+      "filecontents": {
         "value":"${template_file.test.rendered}"
       }
    }
