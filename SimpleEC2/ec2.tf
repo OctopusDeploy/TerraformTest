@@ -22,13 +22,14 @@
          "type":"string",
          "description":"the AMI to use",
          "default": "ami-cb9ec1b1"
-      },
-      "filecontents"{
-        "type":"string",
-        "default":"${file(\"test.txt\")}"
       }
    },
    "resource":{
+      "template_file" : {
+          "test" {
+            "filename" "test.txt"
+          }
+      },
       "aws_instance":{
          "web":{
             "ami":"${var.ami}",
@@ -55,7 +56,7 @@
          "value":"${map(\"a\", \"hi\")}"
       },
       "filecontents" {
-        "value":"${var.filecontents}"
+        "value":"${template_file.test.rendered}"
       }
    }
 }
