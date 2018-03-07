@@ -25,7 +25,7 @@
       },
       "filecontents"{
         "type":"string",
-        "default":"${file("test.txt")}"
+        "default":"${file(\"test.txt\")}"
       }
    },
    "resource":{
